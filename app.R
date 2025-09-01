@@ -11,31 +11,6 @@ library(shinyWidgets)
 library(shiny)
 library(DT)
 
-# ToDo just have a list of cell types so it doesn't change each time you refresh the object
-# Have an option to just highlight one cell type
-
-# http://118.138.236.102/shiny/cosmxos-dev/
-# sudo rm /srv/shiny-server/index.html 
-
-# sudo chown -R shiny:shiny /homevol/apattison/Data/Spatial/Results/cached_fovs_shiny/
-
-# sudo less /var/log/shiny-server/cosmxos-shiny-20230907-052736-39275.log 
-
-addResourcePath(prefix = 'pics', directoryPath = '/oldvol/shiny/')
-
-# PNGs converted to JPGs for Griffith
-# for i in *.png ; do convert "$i" "${i%.*}.jpg" ; done
-
-credentials <- data.frame(
-  user = c("abud", "shinymanager"), # mandatory
-  password = c("explorethecosmxos", "rY+,u,G:=<!Uzq36"), # mandatory
-  start = c("2021-07-28"), # optional
-  expire = c(NA, "2024-12-31"),
-  admin = c(FALSE, TRUE),
-  comment = "Simple and secure authentification mechanism for single ‘Shiny’ applications.",
-  stringsAsFactors = FALSE
-)
-
 toplevel_dir <- "/pvol/shiny_data/cached_fovs_smaller/"
 
 donor_stats <- read_csv("/pvol/shiny_data/Slide-FOV sample metadata.csv")
