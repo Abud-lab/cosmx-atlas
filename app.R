@@ -1,4 +1,3 @@
-#shinyOptions(cache = cachem::cache_disk("/homevol/shiny/app_cache/cache/"))
 # Secure shiny login
 library(shinymanager)
 library(qs)
